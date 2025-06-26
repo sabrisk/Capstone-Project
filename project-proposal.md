@@ -49,7 +49,8 @@ The primary users of the app will be:
       experience
 3. Sensitive Information
     - Email, passwords, and potentially even gifts should be treated as sensitive information. Possibly even names if shoppers should be anonymous to each other
-4. Functionality
+
+### Functionality
 
 -   Authentication: Users can log in with email and password
 -   Event Creations: Users can create events and add/remove participants (shoppers/recipients)
