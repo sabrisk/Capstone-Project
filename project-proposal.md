@@ -55,7 +55,7 @@ The primary users of the app will be:
 -   Event Creations: Users can create events and add/remove participants (shoppers/recipients)
 -   Content Display: Users can view events and gifts to be purchased.
 -   Search and Filter: Users can search for and filter gifts
--   Email/notifications: Users should receive emails and notifications based on events in app
+-   Email/notifications: Users should receive e-mail invites which direct them to account creation as well as e-mail notifications based on events in app
 -   Reservations: Users can mark gifts as reserved or purchased.
 -   Adding gifts: Shoppers and recipients can add/remove gifts for others to see. (Shopper added gifts should be hidden from the recipeint by default unless otherwise specified )
 
