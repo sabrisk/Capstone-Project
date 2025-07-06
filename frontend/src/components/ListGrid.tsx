@@ -1,15 +1,10 @@
 import React from "react";
 import ListItem from "../components/ListItem";
 import { v4 as uuid } from "uuid";
+import { GiftEvent } from "@/types";
 
 type Person = {
 	name: string;
-};
-
-type GiftEvent = {
-	name: string;
-	date?: string;
-	description?: string;
 };
 
 type Variant = "person" | "gift-event";

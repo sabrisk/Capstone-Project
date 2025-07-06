@@ -1,7 +1,17 @@
-import React from "react";
+import GridContainer from "@/components/GridContainer";
+import React, { useEffect } from "react";
 import ListGrid from "../components/ListGrid";
+import { useGiftEventStore } from "@/store/giftEventStore";
+import { GiftEvent } from "../types";
+
+type GiftEventStore = {
+	giftEvents: GiftEvent[];
+	updateGiftEvents: (updater: (prev: GiftEvent[]) => GiftEvent[]) => void;
+};
 
 function GiftEvents() {
+	const { giftEvents, updateGiftEvents } = useGiftEventStore();
+
 	const GIFT_EVENTS = [
 		{
 			name: "Robert's birthday party",

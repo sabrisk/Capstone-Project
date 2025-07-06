@@ -1,3 +1,9 @@
+export type GiftEvent = {
+	name: string;
+	date?: string;
+	description?: string;
+};
+
 // export type ListItemProps = {
 // 	name: string;
 // 	date?: string;
