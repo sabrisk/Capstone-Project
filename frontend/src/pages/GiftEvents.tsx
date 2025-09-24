@@ -63,8 +63,11 @@ function GiftEvents() {
 			{/* <header className="flex flex-col items-center mb-16">
 				<h1 className="text-4xl font-bold">I Want That!</h1>
 			</header> */}
-			<GridContainer title={"Events"}>
-				<ListGrid items={giftEvents} variant={"gift-event"} />
+			<GridContainer // title={"People"}
+				title={"Events"}
+				description={"Select or add event below"}
+			>
+				<ListGrid items={giftEvents} variant={"person"} />
 			</GridContainer>
 
 			<button

@@ -5,7 +5,7 @@ import GridContainer from "../components/GridContainer";
 
 function People() {
 	const PEOPLE = [
-		{ name: "Brock" },
+		{ name: "Robert" },
 		{ name: "Pamela" },
 		{ name: "Mom" },
 		{ name: "Dad" },
@@ -18,7 +18,12 @@ function People() {
 			<nav className="flex justify-end items-start">
 				<BackButton />
 			</nav>
-			<GridContainer title={"People"}>
+
+			<GridContainer
+				// title={"People"}
+				title={"Christmas 2025"}
+				description={"Whole family getting together for Christmas"}
+			>
 				<ListGrid items={PEOPLE} variant={"person"} />
 			</GridContainer>
 			<button
