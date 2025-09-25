@@ -1,17 +1,8 @@
 import GridContainer from "@/components/GridContainer";
 import React, { useEffect } from "react";
 import ListGrid from "../components/ListGrid";
-import { useGiftEventStore } from "@/store/giftEventStore";
-import { GiftEvent } from "../types";
-
-type GiftEventStore = {
-	giftEvents: GiftEvent[];
-	updateGiftEvents: (updater: (prev: GiftEvent[]) => GiftEvent[]) => void;
-};
 
 function GiftEvents() {
-	const { giftEvents, updateGiftEvents } = useGiftEventStore();
-
 	const GIFT_EVENTS = [
 		{
 			name: "Robert's birthday party",
@@ -45,18 +36,12 @@ function GiftEvents() {
 		},
 	];
 
-	useEffect(() => {
-		updateGiftEvents(() => GIFT_EVENTS);
-	}, []);
-
 	const anEvent = {
 		name: "Christmas 2025",
 		date: "12-25-2025",
 		description: "Whole family getting together for Christmas along",
 	};
-	const handleClick = () => {
-		updateGiftEvents((prev) => [...prev, anEvent]);
-	};
+	const handleClick = () => {};
 
 	return (
 		<main className="p-6">
@@ -67,7 +52,7 @@ function GiftEvents() {
 				title={"Events"}
 				description={"Select or add event below"}
 			>
-				<ListGrid items={giftEvents} variant={"person"} />
+				<ListGrid items={GIFT_EVENTS} variant={"person"} />
 			</GridContainer>
 
 			<button
