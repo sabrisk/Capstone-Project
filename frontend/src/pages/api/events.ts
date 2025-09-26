@@ -1,7 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-// Fake in-memory database
 let items = [
+	{
+		name: "Harley the Donkey's Birthday",
+		date: "5-25-2025",
+		description: "Christmas 2025",
+	},
 	{
 		name: "Robert's birthday party",
 		date: "5-25-2025",
