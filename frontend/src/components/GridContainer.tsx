@@ -21,7 +21,6 @@ function GridContainer({
 				<h1 className="mb-4 font-bold text-4xl">{title}</h1>
 				<h3 className="text-lg">{description}</h3>
 			</div>
-			{/* <h2 className="text-2xl text-gray-400 mb-6 font-bold">{title}</h2> */}
 			<button className="hidden md:block bg-[#F5EFE7] text-[#313131] font-bold border-1 rounded border-[#F5EFE7] px-2 ">
 				Add {variant === "person" ? "Person" : "Event"}
 			</button>
