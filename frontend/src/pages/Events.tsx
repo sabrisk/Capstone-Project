@@ -1,40 +1,24 @@
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+
 import GridContainer from "@/components/GridContainer";
 import React, { useEffect } from "react";
 import ListGrid from "../components/ListGrid";
+import {
+	getGiftEvents,
+	selectAllGiftEvents,
+	selectGiftEventsStatus,
+} from "@/features/GiftEvents/GiftEventsSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-function GiftEvents() {
-	const GIFT_EVENTS = [
-		{
-			name: "Robert's birthday party",
-			date: "5-25-2025",
-			description: "Christmas 2025",
-		},
-		{
-			name: "Thanksgiving 2025",
-			date: "12-25-2025",
-			description: "Whole family getting together for Christmas",
-		},
-		{
-			name: "Christmas 2025",
-			date: "12-25-2025",
-			description: "Whole family getting together for Christmas along",
-		},
-		{
-			name: "Rockclimbing at recreational",
-			date: "5-25-2025",
-			description: "A fun get together with Grandmother at her place in",
-		},
-		{
-			name: "Christmas 2025",
-			date: "12-25-2025",
-			description: "Whole family getting together for Christmas along",
-		},
-		{
-			name: "Christmas 2025",
-			date: "12-25-2025",
-			description: "Whole family getting together for Christmas along",
-		},
-	];
+function Events() {
+	const dispatch = useAppDispatch();
+	const giftEvents = useAppSelector(selectAllGiftEvents);
+	const giftEventsStatus = useAppSelector(selectGiftEventsStatus);
+	useEffect(() => {
+		if (giftEventsStatus === "idle") {
+			dispatch(getGiftEvents());
+		}
+	}, [giftEventsStatus, dispatch]);
 
 	const anEvent = {
 		name: "Christmas 2025",
@@ -52,7 +36,7 @@ function GiftEvents() {
 				title={"Events"}
 				description={"Select or add event below"}
 			>
-				<ListGrid items={GIFT_EVENTS} variant={"person"} />
+				<ListGrid items={giftEvents} variant={"person"} />
 			</GridContainer>
 
 			<button
@@ -66,4 +50,4 @@ function GiftEvents() {
 	);
 }
 
-export default GiftEvents;
+export default Events;
