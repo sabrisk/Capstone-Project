@@ -29,9 +29,6 @@ function Events() {
 
 	return (
 		<main className="p-6">
-			{/* <header className="flex flex-col items-center mb-16">
-				<h1 className="text-4xl font-bold">I Want That!</h1>
-			</header> */}
 			<GridContainer // title={"People"}
 				title={"Events"}
 				description={"Select or add event below"}
