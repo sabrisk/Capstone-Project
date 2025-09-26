@@ -1,6 +1,6 @@
 import React from "react";
 
-type Variant = "person" | "gift-event";
+
 
 type ListItemProps = {
 	name: string;
