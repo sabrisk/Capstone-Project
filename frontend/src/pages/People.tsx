@@ -23,8 +23,9 @@ function People() {
 				// title={"People"}
 				title={"Christmas 2025"}
 				description={"Whole family getting together for Christmas"}
+				variant={"person"}
 			>
-				<ListGrid items={PEOPLE} variant={"person"} />
+				<ListGrid items={PEOPLE} />
 			</GridContainer>
 			<button
 				className="md:hidden fixed bottom-7 right-7 w-16 h-16 bg-gray-600 text-white text-4xl border border-slate-600 rounded-full flex items-center justify-center  hover:bg-gray-500 transition-colors"

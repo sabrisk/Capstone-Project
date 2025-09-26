@@ -1,13 +1,20 @@
 import React from "react";
 
+type Variant = "person" | "gift-event";
 type GridContainerProps = {
 	title: String;
 	// eventName: String;
 	description: String;
+	variant: Variant;
 	children?: React.ReactNode;
 };
 
-function GridContainer({ children, title, description }: GridContainerProps) {
+function GridContainer({
+	children,
+	title,
+	description,
+	variant,
+}: GridContainerProps) {
 	return (
 		<section className="max-w-6xl mx-auto px-8 mt-16">
 			<div className=" mb-7 pb-5  ">
@@ -15,8 +22,8 @@ function GridContainer({ children, title, description }: GridContainerProps) {
 				<h3 className="text-lg">{description}</h3>
 			</div>
 			{/* <h2 className="text-2xl text-gray-400 mb-6 font-bold">{title}</h2> */}
-			<button className="bg-[#F5EFE7] text-[#313131] font-bold border-1 rounded border-[#F5EFE7] px-2 ">
-				Add Person
+			<button className="hidden md:block bg-[#F5EFE7] text-[#313131] font-bold border-1 rounded border-[#F5EFE7] px-2 ">
+				Add {variant === "person" ? "Person" : "Event"}
 			</button>
 			{children}
 		</section>

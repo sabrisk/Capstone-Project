@@ -14,11 +14,11 @@
 // 	name: string;
 // }
 
-// export interface GiftEvent {
-// 	name: string;
-// 	date?: string;
-// 	description?: string;
-// }
+export interface GiftEvent {
+	name: string;
+	date?: string;
+	description?: string;
+}
 
 // export type Item = Person | GiftEvent;
 
